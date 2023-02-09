@@ -1,7 +1,8 @@
-import React from "react";
-import { CaseContainer } from "./style";
+import { useState } from "react";
+import { CaseBorder, CaseContainer } from "./style";
 
 export default function CasePuzzle(props) {
+  const [isClicked, setIsClicked] = useState(false);
   /**
    * Calcul le nom de point à afficher sur une case
    */
@@ -12,5 +13,14 @@ export default function CasePuzzle(props) {
     });
   }
 
-  return <CaseContainer>{calculPoint(props.point)}</CaseContainer>;
+  return (
+    <CaseBorder>
+      <CaseContainer
+        isClicked={isClicked}
+        onClick={() => setIsClicked(!isClicked)}
+      >
+        {calculPoint(props.point)}
+      </CaseContainer>
+    </CaseBorder>
+  );
 }
