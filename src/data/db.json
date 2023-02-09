@@ -1,0 +1,31 @@
+{
+  "puzzles": [
+    {
+      "id": 1,
+      "hauteur": 2,
+      "longueur": 2,
+      "matrice": [
+        {
+          "coordonnees": [0, 0],
+          "point": 1
+        },
+        {
+          "coordonnees": [0, 1],
+          "point": 0
+        },
+        {
+          "coordonnees": [1, 0],
+          "point": 0
+        },
+        {
+          "coordonnees": [1, 1],
+          "point": 1
+        }
+      ],
+      "points": [
+        [0, 0],
+        [1, 1]
+      ]
+    }
+  ]
+}
