@@ -1,4 +1,3 @@
-import "./App.css";
 import Puzzle from "./components/Puzzle/Puzzle";
 
 function App() {

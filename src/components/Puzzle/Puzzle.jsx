@@ -1,6 +1,7 @@
 import React from "react";
 import useAxios from "axios-hooks";
 import CasePuzzle from "../Case/CasePuzzle";
+import { PuzzleLine, PuzzleContainer } from "./style";
 
 export default function Puzzle(props) {
   const [{ data, loading, error }] = useAxios(
@@ -31,7 +32,7 @@ export default function Puzzle(props) {
     const puzzleMatrix = createMatrix();
     let test = puzzleMatrix.map((line, index) => {
       return (
-        <div className="puzzleLine" key={index}>
+        <PuzzleLine key={index}>
           {line.map((column, index) => {
             return (
               <CasePuzzle
@@ -44,7 +45,7 @@ export default function Puzzle(props) {
               />
             );
           })}
-        </div>
+        </PuzzleLine>
       );
     });
     return test;
@@ -53,5 +54,5 @@ export default function Puzzle(props) {
   if (loading) return <div>Chargement du puzzle...</div>;
   if (error) return <div>Erreur lors du Chargement du puzzle</div>;
 
-  return <div>{getPuzzle()}</div>;
+  return <PuzzleContainer>{getPuzzle()}</PuzzleContainer>;
 }
