@@ -12,7 +12,15 @@ export default function Puzzle(props) {
    * @returns {array} Tableau de tableaux de zéro
    */
   function createMatrix() {
-    return new Array(data.hauteur).fill(new Array(data.longueur).fill(0));
+    let matrix = [];
+    for (let i = 0; i < data.hauteur; i++) {
+      let line = [];
+      for (let k = 0; k < data.longueur; k++) {
+        line.push(i);
+      }
+      matrix.push(line);
+    }
+    return matrix;
   }
 
   /**
@@ -21,11 +29,20 @@ export default function Puzzle(props) {
    */
   function getPuzzle() {
     const puzzleMatrix = createMatrix();
-    let test = puzzleMatrix.map((ligne, index) => {
+    let test = puzzleMatrix.map((line, index) => {
       return (
-        <div key={index}>
-          {ligne.map((colonne, index) => {
-            return <CasePuzzle key={index} />;
+        <div className="puzzleLine" key={index}>
+          {line.map((column, index) => {
+            return (
+              <CasePuzzle
+                key={index}
+                point={
+                  data.points[`${column},${index}`]
+                    ? data.points[`${column},${index}`]
+                    : 0
+                }
+              />
+            );
           })}
         </div>
       );
