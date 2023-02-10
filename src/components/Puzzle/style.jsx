@@ -6,6 +6,8 @@ export const PuzzleLine = styled.div`
 `;
 
 export const PuzzleContainer = styled.div`
-  width: 80%;
+  width: max-content;
   margin: auto;
+  padding: 10px;
+  background: #3364ff;
 `;

@@ -9,11 +9,12 @@ export const CaseContainer = styled.div`
   height: 30px;
   font-size: 8px;
   background: ${(props) => (props.isClicked ? "white" : "")};
-  color: ${(props) => (props.isClicked ? "black" : "white")};
+  color: black;
   transition: all 0.2s;
   &:hover {
     cursor: pointer;
-    background: ${(props) => (props.isClicked ? "" : "grey")};
+    background: ${(props) =>
+      props.isClicked ? "" : "rgb(255, 255, 255, 0.6)"};
   }
 `;
 
