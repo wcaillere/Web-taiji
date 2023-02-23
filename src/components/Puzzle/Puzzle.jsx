@@ -7,7 +7,7 @@ export default function Puzzle(props) {
   const [ValidityMatrix, setValidityMaxtix] = useState([]);
 
   const [{ data, loading, error }] = useAxios(
-    "http://localhost:3000/puzzles/1"
+    `http://localhost:3000/puzzles/${props.id}`
   );
 
   // Initialise une matrice de vérification lorsque la data est chargée
@@ -98,5 +98,9 @@ export default function Puzzle(props) {
   if (loading) return <div>Chargement du puzzle...</div>;
   if (error) return <div>Erreur lors du Chargement du puzzle</div>;
 
-  return <PuzzleContainer>{getPuzzle()}</PuzzleContainer>;
+  return (
+    <div>
+      <PuzzleContainer>{getPuzzle()}</PuzzleContainer>
+    </div>
+  );
 }

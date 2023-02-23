@@ -1,10 +1,17 @@
-import Puzzle from "./components/Puzzle/Puzzle";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import PuzzlePage from "./pages/PuzzlePage/PuzzlePage";
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/puzzle",
+      element: <PuzzlePage />,
+    },
+  ]);
+
   return (
     <div className="App">
-      <h1>test</h1>
-      <Puzzle id="54" />
+      <RouterProvider router={router} />
     </div>
   );
 }
