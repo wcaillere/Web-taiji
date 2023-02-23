@@ -5,8 +5,8 @@ export const CaseContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin: 4px;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   font-size: 8px;
   background: ${(props) => (props.isClicked ? "white" : "")};
   color: black;
