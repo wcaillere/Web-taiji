@@ -19,7 +19,7 @@ export default function CasePuzzle(props) {
         isClicked={isClicked}
         onClick={() => {
           setIsClicked(!isClicked);
-          props.modifyValidityMatrix(props.coordonnees);
+          props.modifyValidityMatrix(props.coordonnees, "isClicked");
         }}
       >
         {calculPoint(props.point)}
