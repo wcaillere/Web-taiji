@@ -1,6 +1,7 @@
 import React from "react";
 import Puzzle from "../../components/Puzzle/Puzzle";
 import { useState } from "react";
+import "./PuzzlePage.css";
 
 export default function PuzzlePage() {
   const [puzzleId, setPuzzleId] = useState(1);

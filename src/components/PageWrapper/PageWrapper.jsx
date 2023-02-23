@@ -5,7 +5,7 @@ import "./PageWrapper.css";
 
 export default function PageWrapper() {
   return (
-    <div>
+    <div className="pageWrapper">
       <header></header>
       <main>
         <Outlet />

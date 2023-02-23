@@ -20,4 +20,9 @@
 
 body {
   margin: 0;
+  height: 100vh;
+}
+
+html {
+  height: 100vh;
 }
