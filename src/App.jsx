@@ -1,11 +1,18 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import PageWrapper from "./components/PageWrapper/PageWrapper";
 import PuzzlePage from "./pages/PuzzlePage/PuzzlePage";
 
 function App() {
   const router = createBrowserRouter([
     {
-      path: "/puzzle",
-      element: <PuzzlePage />,
+      path: "/",
+      element: <PageWrapper />,
+      children: [
+        {
+          path: "/puzzle",
+          element: <PuzzlePage />,
+        },
+      ],
     },
   ]);
 
