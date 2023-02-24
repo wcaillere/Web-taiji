@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CaseBorder, CaseContainer } from "./style";
 
 export default function CasePuzzle(props) {
   const [isClicked, setIsClicked] = useState(false);
+
+  useEffect(() => {
+    setIsClicked(false);
+  }, [props.data]);
   /**
    * Calcul le nom de point à afficher sur une case
    */

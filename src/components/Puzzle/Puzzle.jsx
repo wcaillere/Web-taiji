@@ -95,6 +95,7 @@ export default function Puzzle(props) {
                     : 0
                 }
                 modifyValidityMatrix={modifyValidityMatrix}
+                data={data}
               />
             );
           })}
