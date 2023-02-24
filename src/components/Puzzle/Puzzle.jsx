@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useAxios from "axios-hooks";
 import CasePuzzle from "../Case/CasePuzzle";
-import { PuzzleLine, PuzzleContainer } from "./style";
+import { PuzzleLine, PuzzleContainer, PuzzleButtonValid } from "./style";
 
 export default function Puzzle(props) {
   const [validityMatrix, setValidityMaxtix] = useState([]);
@@ -195,9 +195,11 @@ export default function Puzzle(props) {
   if (error) return <div>Erreur lors du Chargement du puzzle</div>;
 
   return (
-    <div>
+    <div style={{ textAlign: "center" }}>
       <PuzzleContainer>{getPuzzle()}</PuzzleContainer>
-      <button onClick={() => console.log(verifyPuzzle())}>Valider</button>
+      <PuzzleButtonValid onClick={() => console.log(verifyPuzzle())}>
+        Valider
+      </PuzzleButtonValid>
     </div>
   );
 }

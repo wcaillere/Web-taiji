@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const PuzzleNavigation = styled.nav`
   text-align: center;
   margin-bottom: 20px;
+  cursor: pointer;
 `;
 
 export const NavButton = styled.button`
@@ -11,6 +12,7 @@ export const NavButton = styled.button`
   padding: 8px 12px;
   border: none;
   border-radius: 6px;
+  cursor: pointer;
 `;
 
 export const NavSelect = styled.select`
@@ -20,4 +22,5 @@ export const NavSelect = styled.select`
   border-radius: 6px;
   margin: 0px 10px;
   padding: 8px 12px;
+  cursor: pointer;
 `;

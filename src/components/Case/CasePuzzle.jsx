@@ -9,7 +9,13 @@ export default function CasePuzzle(props) {
   function calculPoint(pointNumber) {
     let array = new Array(pointNumber).fill(0);
     return array.map((item, index) => {
-      return <i className="fa-solid fa-circle" key={index}></i>;
+      return (
+        <i
+          className="fa-solid fa-circle"
+          key={index}
+          style={{ margin: "1px" }}
+        ></i>
+      );
     });
   }
 

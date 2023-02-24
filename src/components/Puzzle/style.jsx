@@ -15,3 +15,14 @@ export const PuzzleContainer = styled.div`
   border-radius: 10px;
   box-shadow: ;
 `;
+
+export const PuzzleButtonValid = styled.button`
+  color: white;
+  font-size: 16px;
+  background: #2b2b2b;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+`;

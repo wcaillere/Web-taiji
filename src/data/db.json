@@ -2,12 +2,18 @@
   "puzzles": [
     {
       "id": 1,
+      "hauteur": 1,
+      "longueur": 1,
+      "points": { "0,0": 1 }
+    },
+    {
+      "id": 2,
       "hauteur": 2,
       "longueur": 2,
       "points": { "0,0": 1, "1,1": 1 }
     },
     {
-      "id": 2,
+      "id": 3,
       "hauteur": 3,
       "longueur": 3,
       "points": { "0,0": 3, "1,1": 3, "2,2": 2 }
