@@ -6,14 +6,35 @@ export default function Puzzlenav(props) {
    * Affiche le puzzle suivant
    */
   function nextPuzzle() {
-    props.changePuzzleId(props.puzzleId + 1);
+    if (props.puzzleId < props.puzzleList.length) {
+      props.changePuzzleId(props.puzzleId + 1);
+    }
   }
 
   /**
    * Affiche le puzzle précédent
    */
   function previousPuzzle() {
-    props.changePuzzleId(props.puzzleId - 1);
+    if (props.puzzleId != 1) {
+      props.changePuzzleId(props.puzzleId - 1);
+    }
+  }
+
+  /**
+   * Génère le code jsx pour le select de l'id d'un puzzle
+   * @returns {JSX} code jsx des options du select
+   */
+  function getSelect() {
+    return props.puzzleList.map((item) => {
+      return <option key={item.id}>{item.id}</option>;
+    });
+  }
+
+  /**
+   * Gère le choix d'un puzzle dans le select
+   */
+  function handleChangePuzzle(ev) {
+    props.changePuzzleId(ev.target.value);
   }
 
   return (
@@ -21,9 +42,7 @@ export default function Puzzlenav(props) {
       <NavButton onClick={previousPuzzle} puzzleId={props.puzzleId}>
         {"<<"}
       </NavButton>
-      <NavSelect>
-        <option>1</option>
-      </NavSelect>
+      <NavSelect onChange={handleChangePuzzle}>{getSelect()}</NavSelect>
       <NavButton onClick={nextPuzzle} puzzleId={props.puzzleId}>
         {">>"}
       </NavButton>
