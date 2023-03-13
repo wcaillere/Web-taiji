@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PageWrapper from "./components/PageWrapper/PageWrapper";
+import HomePage from "./pages/HomePage/HomePage";
 import PuzzlePage from "./pages/PuzzlePage/PuzzlePage";
 
 function App() {
@@ -11,6 +12,10 @@ function App() {
         {
           path: "/puzzle",
           element: <PuzzlePage />,
+        },
+        {
+          path: "/",
+          element: <HomePage />,
         },
       ],
     },

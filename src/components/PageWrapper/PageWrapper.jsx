@@ -6,7 +6,14 @@ import "./PageWrapper.css";
 export default function PageWrapper() {
   return (
     <div className="pageWrapper">
-      <header></header>
+      <header>
+        <Link to={"/"} className="navLink">
+          Home
+        </Link>
+        <Link to={"/puzzle"} className="navLink">
+          Points
+        </Link>
+      </header>
       <main>
         <Outlet />
       </main>
@@ -15,16 +22,14 @@ export default function PageWrapper() {
         <Link
           to="https://twitter.com/mvandevander"
           target="_blank"
-          className="footerLink"
-        >
+          className="footerLink">
           Matthew VanDevander
         </Link>{" "}
         for the game{" "}
         <Link
           to="https://store.steampowered.com/app/1141580/Taiji/"
           target="_blank"
-          className="footerLink"
-        >
+          className="footerLink">
           Taiji
         </Link>
       </footer>
